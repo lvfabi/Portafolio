@@ -6,28 +6,39 @@ const projectNavigation = "projectnavigation";
 
 function subscribe(update: () => void) {
   window.addEventListener("hashchange", update);
+  window.addEventListener("popstate", update);
   window.addEventListener(projectNavigation, update);
   return () => {
     window.removeEventListener("hashchange", update);
+    window.removeEventListener("popstate", update);
     window.removeEventListener(projectNavigation, update);
   };
 }
 
 function openProject(project: Project) {
-  history.pushState({ portfolioProject: project.slug }, "", `#${project.slug}`);
+  history.pushState(
+    { portfolioProject: project.slug, returnHash: location.hash },
+    "",
+    `#${project.slug}`,
+  );
   window.dispatchEvent(new Event(projectNavigation));
 }
 
 function closeProject() {
-  const slug = location.hash.slice(1);
-  if (history.state?.portfolioProject === slug) {
-    history.back();
-  } else {
-    const url = new URL(location.href);
-    url.hash = "";
-    history.replaceState(null, "", url);
-    window.dispatchEvent(new Event(projectNavigation));
-  }
+  const project = findProject(location.hash);
+  if (!project) return;
+
+  // Close the current entry without restoring scroll from a history traversal.
+  const url = new URL(location.href);
+  const state = history.state;
+  url.hash =
+    state?.portfolioProject === project.slug ? (state.returnHash ?? "") : "";
+  history.replaceState(null, "", url);
+  window.dispatchEvent(new Event(projectNavigation));
+}
+
+function findProject(hash: string) {
+  return projects.find(({ slug }) => `#${slug}` === hash);
 }
 
 export function useProjectDialog() {
@@ -36,6 +47,6 @@ export function useProjectDialog() {
     () => location.hash,
     () => "",
   );
-  const project = projects.find(({ slug }) => `#${slug}` === hash);
+  const project = findProject(hash);
   return { project, openProject, closeProject };
 }

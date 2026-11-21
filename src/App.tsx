@@ -47,7 +47,7 @@ export default function App() {
             <Contact />
           </main>
           <Suspense fallback={null}>
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
               {project && (
                 <ProjectModal
                   key={project.slug}
