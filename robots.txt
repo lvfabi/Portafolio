@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lvfabi.github.io/Portafolio/sitemap.xml
