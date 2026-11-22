@@ -108,13 +108,6 @@ export const projects: readonly Project[] = [
       src: "images/illustrations/control-termico.webp",
       alt: "Ilustración conceptual de una maqueta con ventilador, termómetro y flujo de aire.",
     },
-    cover: {
-      src: "images/projects/control-termico/gallery-1.webp",
-      alt: "Maqueta de control térmico y monitor web en la mesa de exposición.",
-      width: 780,
-      height: 1040,
-      position: "center 93%",
-    },
     title: "Control térmico de un centro de datos a escala",
     period: "2026",
     featured: true,

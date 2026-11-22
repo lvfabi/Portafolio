@@ -4,15 +4,13 @@ export type HeroSegment =
   | { kind: "text" | "highlight" | "italic"; value: string }
   | { kind: "icon"; value: DecorativeIcon };
 
-type ProjectPhoto = {
+type GalleryPhoto = {
   src: string;
   alt: string;
+  caption: string;
   width: number;
   height: number;
 };
-
-type GalleryPhoto = ProjectPhoto & { caption: string };
-type CoverPhoto = ProjectPhoto & { position?: string };
 
 export type Project = {
   slug: string;
@@ -27,7 +25,7 @@ export type Project = {
   toolsHeading?: string;
   evaluatedStack?: readonly string[];
   artwork?: { src: string; alt: string };
-  cover?: string | CoverPhoto;
+  cover?: string;
   gallery?: readonly (string | GalleryPhoto)[];
   links?: { figma?: string; figmaEmbed?: string; demo?: string; repo?: string };
 };
