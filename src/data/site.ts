@@ -22,6 +22,7 @@ export const site = {
   demo: "Demo",
   footer: "© 2026 Fabiola Level · Hecho con cariño en Santiago",
   top: "Volver arriba",
+  projectOverview: "De qué trata",
   role: "Mi aporte",
   tools: "Herramientas y aplicación",
   evaluatedStack: "Tecnologías del sistema evaluado",

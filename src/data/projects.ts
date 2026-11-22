@@ -15,6 +15,8 @@ export const projects: readonly Project[] = [
     period: "2026",
     featured: true,
     summary: "Estrategia de QA y pruebas funcionales de dos implementaciones.",
+    overview:
+      "Sistema para apoyar la gestión de Imprenta Fuentes. El proyecto incluyó dos implementaciones cuyo funcionamiento se evaluó según sus criterios de aceptación.",
     role: "Lideré el equipo de QA, decidí qué probar primero y comuniqué los defectos y riesgos que podían bloquear una entrega.",
     description: [
       "Organicé la estrategia de aseguramiento de calidad durante cinco sprints. Coordiné el seguimiento de defectos y la revisión de las correcciones.",
@@ -61,6 +63,8 @@ export const projects: readonly Project[] = [
     period: "Ago. – nov. 2025",
     featured: true,
     summary: "Sistema de seguimiento del bienestar de apoderados.",
+    overview:
+      "Sistema móvil y web para el seguimiento del bienestar de apoderados. Reúne una bitácora emocional, herramientas de análisis y notificaciones.",
     role: "Diseñé el prototipo móvil, implementé flujos en Flutter y contribuí a las pruebas y al manual de usuario.",
     description: [
       "Trabajé con un equipo de Informática y Psicología en un sistema para el seguimiento del bienestar de apoderados.",
@@ -113,6 +117,8 @@ export const projects: readonly Project[] = [
     featured: true,
     summary:
       "Maqueta con control de ventilación y monitoreo web de temperatura.",
+    overview:
+      "Maqueta a escala que mide la temperatura y activa automáticamente un ventilador. Un panel web permite consultar las mediciones, el estado del ventilador y el historial de alertas.",
     role: "Modelé la carcasa, diseñé la simulación del circuito y desarrollé la interfaz web de monitoreo.",
     description: [
       "Construimos a escala un sistema de control térmico con Arduino. La maqueta combinó una carcasa modular, electrónica de control y una interfaz web.",
@@ -183,6 +189,8 @@ export const projects: readonly Project[] = [
     featured: true,
     summary:
       "Registro de asistencia del personal de aseo y seguimiento de residencias asignadas.",
+    overview:
+      "Aplicación móvil que permite al personal de aseo consultar sus residencias asignadas en un mapa y registrar ingresos y salidas. Usa el GPS para comprobar la cercanía antes de registrar el ingreso.",
     role: "Diseñé e implementé las pantallas del flujo de asistencia, probé los endpoints y documenté casos de prueba en dupla.",
     description: [
       "Definimos en dupla los requerimientos de una aplicación para consultar las residencias asignadas y registrar la asistencia del personal de aseo.",
@@ -240,6 +248,8 @@ export const projects: readonly Project[] = [
     featured: true,
     summary:
       "Comparación de cuatro configuraciones de una red neuronal convolucional.",
+    overview:
+      "Experimento de aprendizaje automático que compara cuatro configuraciones de una red neuronal. La tarea es reconocer a cuál de las diez categorías de CIFAR-10 pertenece cada imagen.",
     role: "Entrené y comparé modelos en un equipo de cuatro personas. Analicé las curvas de aprendizaje para identificar sobreajuste.",
     description: [
       "Comparamos cuatro configuraciones sobre la misma tarea de clasificación multiclase: asignar cada imagen a una de diez categorías.",
@@ -286,6 +296,8 @@ export const projects: readonly Project[] = [
     featured: true,
     summary:
       "Diseño de un MVP para gestionar antecedentes digitales y reconstruir su historial.",
+    overview:
+      "Anteproyecto de un sistema web que busca ordenar y seguir el historial de antecedentes digitales en incidentes de violencia de género facilitada por tecnologías en educación superior.",
     role: "Diseño el expediente, la arquitectura y el plan de evaluación del MVP.",
     description: [
       "Planteo un MVP web para la trazabilidad de antecedentes digitales en incidentes de violencia de género facilitada por tecnologías en educación superior.",
@@ -343,6 +355,8 @@ export const projects: readonly Project[] = [
     // TODO: confirmar período y lenguaje.
     featured: false,
     summary: "Comparación de una heurística voraz y un algoritmo genético.",
+    overview:
+      "El problema consiste en elegir qué objetos llevar en una mochila para maximizar su valor total sin superar el límite de peso. Cada objeto puede elegirse una sola vez.",
     role: "Comparé los dos enfoques en dupla y analicé el valor obtenido y el tiempo de ejecución.",
     description: [
       "Para una capacidad de 65 unidades de peso, el algoritmo genético alcanzó 390 unidades de valor frente a 350 de la heurística, con mayor tiempo de ejecución.",
@@ -370,6 +384,8 @@ export const projects: readonly Project[] = [
     period: "2025",
     featured: false,
     summary: "Análisis de sensores y simulación del bombeo y la refrigeración.",
+    overview:
+      "Simulación apoyada en mediciones de sensores para estudiar cómo distintos ajustes de bombeo y refrigeración afectan la temperatura final de un sistema hidráulico.",
     role: "Analicé mediciones de sensores con Python en un equipo de tres personas.",
     description: [
       "La temperatura final mínima en la simulación se obtuvo con refrigeración máxima y bombeo nulo.",
@@ -415,6 +431,8 @@ export const projects: readonly Project[] = [
     featured: false,
     summary:
       "Comparación de tres modelos de clasificación con 103.904 registros.",
+    overview:
+      "Estudio que utiliza datos de pasajeros para predecir su satisfacción y comparar qué variables son más útiles para clasificarla.",
     role: "Participé en la preparación de los datos y en la comparación de los modelos.",
     description: [
       "Exploramos 103.904 registros para comparar tres modelos de clasificación de satisfacción.",
@@ -457,6 +475,8 @@ export const projects: readonly Project[] = [
     // TODO: confirmar período.
     featured: false,
     summary: "Comparación de tres modelos de regresión con 20.640 registros.",
+    overview:
+      "Estudio que compara modelos de regresión para estimar precios de vivienda en California a partir de las características registradas en el conjunto de datos.",
     role: "Participé en la exploración de datos y la evaluación de modelos de regresión.",
     description: [
       "Comparamos tres modelos de regresión. Random Forest Regressor obtuvo el mejor desempeño en la evaluación del equipo.",
@@ -498,6 +518,8 @@ export const projects: readonly Project[] = [
     period: "2024",
     featured: false,
     summary: "Proyectos de la asignatura de Desarrollo Web.",
+    overview:
+      "Conjunto de proyectos académicos de desarrollo de aplicaciones web con Python y Django, realizados durante la asignatura de Desarrollo Web en 2024.",
     role: "Desarrollé proyectos web con Python y Django durante la asignatura.",
     description: [],
     tools: [

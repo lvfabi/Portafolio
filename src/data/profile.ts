@@ -16,13 +16,15 @@ export const profile = {
   availability:
     "Disponible para práctica profesional · dic 2026 – abr 2027 · 315 h",
   heroTitle: [
-    { kind: "text", value: "Hola, soy Fabiola. Me mueve " },
+    { kind: "text", value: "Hola, soy Fabiola." },
+    { kind: "break" },
+    { kind: "text", value: "Me mueve " },
     { kind: "highlight", value: "innovar" },
     { kind: "text", value: " y " },
     { kind: "italic", value: "ayudar" },
     { kind: "text", value: " " },
     { kind: "icon", value: "sparkle" },
-    { kind: "text", value: ": de la idea al diseño, el código y las pruebas " },
+    { kind: "text", value: " de la idea al diseño, el código y las pruebas " },
     { kind: "icon", value: "flower" },
     { kind: "text", value: "." },
   ] satisfies HeroSegment[],

@@ -7,7 +7,10 @@ import { HeroInlineIcon } from "./HeroInlineIcon";
 export function HeroTitle() {
   const reduced = useReducedMotion();
   const label = profile.heroTitle
-    .map((segment) => (segment.kind === "icon" ? "" : segment.value))
+    .map((segment) => {
+      if (segment.kind === "break") return " ";
+      return segment.kind === "icon" ? "" : segment.value;
+    })
     .join("")
     .replace(/\s+([:.])/g, "$1")
     .replace(/\s+/g, " ")
@@ -18,7 +21,7 @@ export function HeroTitle() {
       .reduce(
         (count, segment) =>
           count +
-          (segment.kind === "icon"
+          (segment.kind === "icon" || segment.kind === "break"
             ? 0
             : segment.value.trim().split(/\s+/).filter(Boolean).length),
         0,
@@ -34,6 +37,7 @@ export function HeroTitle() {
     >
       <span aria-hidden="true">
         {profile.heroTitle.map((segment, index) => {
+          if (segment.kind === "break") return <br key={index} />;
           if (segment.kind === "icon") {
             return (
               <HeroInlineIcon

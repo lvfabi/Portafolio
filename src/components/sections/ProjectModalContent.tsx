@@ -37,6 +37,10 @@ export function ProjectModalContent({ project }: { project: Project }) {
         />
       )}
     </div>,
+    <div key="overview">
+      <h3>{site.projectOverview}</h3>
+      <p>{project.overview}</p>
+    </div>,
     <div key="role">
       <h3>{site.role}</h3>
       <p>{project.role}</p>
