@@ -1,11 +1,16 @@
 // Un objeto por proyecto. Ejemplo: featured: false lo muestra entre los proyectos académicos.
-// cover y gallery permiten indicar rutas alternativas. figmaEmbed recibe el src del iframe de Figma.
+// cover y gallery permiten indicar rutas alternativas. artwork es la portada conceptual de respaldo.
+// links.figma recibe el enlace directo al prototipo.
 import type { Project } from "../types/content";
 
 // EDITA AQUÍ
 export const projects: readonly Project[] = [
   {
     slug: "imprenta-fuentes",
+    artwork: {
+      src: "images/illustrations/imprenta-fuentes.webp",
+      alt: "Ilustración conceptual de hojas de impresión con una lista de comprobación y una lupa.",
+    },
     title: "Sistema de Gestión Imprenta Fuentes · QA Lead",
     period: "2026",
     featured: true,
@@ -48,6 +53,10 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "emocionalidad",
+    artwork: {
+      src: "images/illustrations/emocionalidad.webp",
+      alt: "Ilustración conceptual de un diario de bienestar y un teléfono con símbolos de estado de ánimo.",
+    },
     title: "Sistema de gestión de emocionalidad · Municipalidad de Providencia",
     period: "Ago. – nov. 2025",
     featured: true,
@@ -85,12 +94,18 @@ export const projects: readonly Project[] = [
           "Redacté el manual de bitácora, analítica y notificaciones como parte de la entrega del equipo interdisciplinario.",
       },
     ],
-    figmaEmbed:
-      "https://embed.figma.com/proto/fJfCcENh8aZRvPBOaPgOVK/App_encuestas?node-id=27-4662&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=225%3A1838&embed-host=share",
+    links: {
+      figma:
+        "https://www.figma.com/proto/fJfCcENh8aZRvPBOaPgOVK/App_encuestas?node-id=27-4662&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=225%3A1838",
+    },
     // TODO: agregar la captura de la bitácora en Figma y, si se autoriza, su equivalente en Flutter sin datos reales.
   },
   {
     slug: "control-termico",
+    artwork: {
+      src: "images/illustrations/control-termico.webp",
+      alt: "Ilustración conceptual de una maqueta con ventilador, termómetro y flujo de aire.",
+    },
     title: "Control térmico de un centro de datos a escala",
     // TODO: confirmar período.
     featured: true,
@@ -135,6 +150,10 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "cleany",
+    artwork: {
+      src: "images/illustrations/cleany.webp",
+      alt: "Ilustración conceptual de un mapa con ubicaciones marcadas y un teléfono.",
+    },
     title: "Cleany · Aplicación móvil de asistencia por GPS",
     period: "2025",
     featured: true,
@@ -178,12 +197,18 @@ export const projects: readonly Project[] = [
           "Integré autenticación durante el desarrollo. Para el MVP, el informe de cierre registra que se simplificó el acceso.",
       },
     ],
-    figmaEmbed:
-      "https://embed.figma.com/proto/ruloGZQSNj4c6UlWRHGPXI/App_limpieza?node-id=51-69&starting-point-node-id=51%3A39&embed-host=share",
+    links: {
+      figma:
+        "https://www.figma.com/proto/ruloGZQSNj4c6UlWRHGPXI/App_limpieza?node-id=51-69&starting-point-node-id=51%3A39",
+    },
     // TODO: agregar portada y capturas de la aplicación.
   },
   {
     slug: "cifar-10",
+    artwork: {
+      src: "images/illustrations/cifar-10.webp",
+      alt: "Ilustración conceptual de una cuadrícula de imágenes que se conecta a nodos de clasificación.",
+    },
     title: "Clasificación de imágenes con CNN · CIFAR-10",
     // TODO: confirmar período y revisar si el notebook menciona Keras.
     featured: true,
@@ -226,6 +251,10 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "trabajo-de-titulo",
+    artwork: {
+      src: "images/illustrations/trabajo-de-titulo.webp",
+      alt: "Ilustración conceptual de un expediente protegido con documentos ordenados en el tiempo.",
+    },
     title: "Trabajo de título · Trazabilidad de antecedentes digitales",
     period: "Anteproyecto en curso desde 2026",
     featured: true,
@@ -280,6 +309,10 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "mochila",
+    artwork: {
+      src: "images/illustrations/mochila.webp",
+      alt: "Ilustración conceptual de una mochila junto a objetos de distintos pesos.",
+    },
     title: "Optimización combinatoria · Mochila 0/1",
     // TODO: confirmar período y lenguaje.
     featured: false,
@@ -303,6 +336,10 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "simulacion-hidraulica",
+    artwork: {
+      src: "images/illustrations/simulacion-hidraulica.webp",
+      alt: "Ilustración conceptual de dos tanques de agua conectados por tuberías.",
+    },
     title: "Simulación de sistemas hidráulicos",
     period: "2025",
     featured: false,
@@ -343,6 +380,10 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "satisfaccion-de-pasajeros",
+    artwork: {
+      src: "images/illustrations/satisfaccion-de-pasajeros.webp",
+      alt: "Ilustración conceptual de una ventanilla de avión y un gráfico de satisfacción.",
+    },
     title: "Clasificación de satisfacción de pasajeros",
     // TODO: confirmar período.
     featured: false,
@@ -382,6 +423,10 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "precios-de-vivienda-california",
+    artwork: {
+      src: "images/illustrations/precios-de-vivienda-california.webp",
+      alt: "Ilustración conceptual de viviendas y puntos de un gráfico de precios.",
+    },
     title: "Estimación de precios de vivienda en California",
     // TODO: confirmar período.
     featured: false,
@@ -419,6 +464,10 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "desarrollo-web-django",
+    artwork: {
+      src: "images/illustrations/desarrollo-web-django.webp",
+      alt: "Ilustración conceptual de una ventana de navegador y las capas de una página web.",
+    },
     title: "Desarrollo web con Django",
     period: "2024",
     featured: false,

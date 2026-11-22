@@ -16,7 +16,7 @@ export type Project = {
   tools?: readonly { name: string; application: string }[];
   toolsHeading?: string;
   evaluatedStack?: readonly string[];
-  figmaEmbed?: string;
+  artwork?: { src: string; alt: string };
   cover?: string;
   gallery?: readonly string[];
   links?: { figma?: string; demo?: string; repo?: string };

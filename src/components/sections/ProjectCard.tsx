@@ -1,13 +1,12 @@
 import { m, useInView, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
-import { publicAsset } from "../../lib/assets";
 import { colors } from "../../lib/constants";
 import { easeExpo, fade, timings } from "../../lib/motion";
 import type { Project } from "../../types/content";
 import { Icon } from "../icons/Icon";
 import { CustomCursor } from "../motion/CustomCursor";
-import { PortfolioImage } from "../ui/PortfolioImage";
+import { ProjectCover } from "../ui/ProjectCover";
 import { Tags } from "../ui/Tags";
 
 export function ProjectCard({
@@ -28,9 +27,6 @@ export function ProjectCard({
     offset: ["start end", "end start"],
   });
   const imageY = useTransform(scrollYProgress, [0, 1], [-16, 16]);
-  const src = publicAsset(
-    project.cover ?? `images/projects/${project.slug}/cover.webp`,
-  );
   const titleId = `card-${project.slug}`;
 
   return (
@@ -85,7 +81,7 @@ export function ProjectCard({
               style={reduced ? undefined : { y: imageY }}
             >
               <div className="project-zoom">
-                <PortfolioImage src={src} alt="" width={1600} height={1000} />
+                <ProjectCover project={project} decorative />
               </div>
             </m.div>
           </div>

@@ -1040,27 +1040,3 @@ html:has(.project-dialog[open]) {
 .project-evaluated-stack {
   margin-top: 16px;
 }
-
-.project-prototype-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  column-gap: 10px;
-}
-
-.project-prototype-frame {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-cover);
-  background: var(--color-bg);
-}
-
-@media (width >= 768px) {
-  .project-prototype-frame {
-    aspect-ratio: 16 / 9;
-  }
-}

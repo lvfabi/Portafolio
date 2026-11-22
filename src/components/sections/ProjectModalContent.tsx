@@ -7,10 +7,9 @@ import { easeExpo, fade, timings } from "../../lib/motion";
 import type { Project } from "../../types/content";
 import { Icon } from "../icons/Icon";
 import { Button } from "../ui/Button";
-import { PortfolioImage } from "../ui/PortfolioImage";
+import { ProjectCover } from "../ui/ProjectCover";
 import { Tags } from "../ui/Tags";
 import { ProjectGallery } from "./ProjectGallery";
-import { ProjectPrototype } from "./ProjectPrototype";
 import { ProjectTools } from "./ProjectTools";
 
 export function ProjectModalContent({ project }: { project: Project }) {
@@ -19,7 +18,6 @@ export function ProjectModalContent({ project }: { project: Project }) {
     project.cover ?? `images/projects/${project.slug}/cover.webp`,
   );
   const links = [
-    { label: site.figma, href: project.links?.figma },
     { label: site.demo, href: project.links?.demo },
     {
       label: site.github,
@@ -30,6 +28,17 @@ export function ProjectModalContent({ project }: { project: Project }) {
     <div key="title">
       {project.period && <p className="project-period">{project.period}</p>}
       <h2 id="project-modal-title">{project.title}</h2>
+      {project.links?.figma && (
+        <Button
+          href={project.links.figma}
+          variant="text"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {site.openPrototype}
+          <Icon name="arrow" />
+        </Button>
+      )}
     </div>,
     <div key="role">
       <h3>{site.role}</h3>
@@ -46,13 +55,6 @@ export function ProjectModalContent({ project }: { project: Project }) {
       </div>
     ),
     project.stack.length > 0 && <Tags key="stack" items={project.stack} />,
-    project.figmaEmbed && (
-      <ProjectPrototype
-        key="prototype"
-        src={project.figmaEmbed}
-        projectTitle={project.title}
-      />
-    ),
     <ProjectGallery key="gallery" project={project} />,
     links.length > 0 && (
       <div key="links" className="actions">
@@ -70,14 +72,9 @@ export function ProjectModalContent({ project }: { project: Project }) {
   ];
   return (
     <>
-      {(project.featured || cover) && (
+      {(project.featured || cover || project.artwork) && (
         <div className="modal-cover">
-          <PortfolioImage
-            src={cover}
-            alt={site.coverAlt(project.title)}
-            width={1600}
-            height={1000}
-          />
+          <ProjectCover project={project} />
         </div>
       )}
       <div className="modal-copy">

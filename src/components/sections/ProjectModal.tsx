@@ -40,7 +40,7 @@ export default function ProjectModal({
   function trapFocus(event: KeyboardEvent<HTMLDialogElement>) {
     if (event.key !== "Tab") return;
     const focusable = event.currentTarget.querySelectorAll<HTMLElement>(
-      'button:not([disabled]), a[href], iframe, [tabindex="0"]',
+      'button:not([disabled]), a[href], [tabindex="0"]',
     );
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
