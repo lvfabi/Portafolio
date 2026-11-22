@@ -19,5 +19,5 @@ export type Project = {
   artwork?: { src: string; alt: string };
   cover?: string;
   gallery?: readonly string[];
-  links?: { figma?: string; demo?: string; repo?: string };
+  links?: { figma?: string; figmaEmbed?: string; demo?: string; repo?: string };
 };

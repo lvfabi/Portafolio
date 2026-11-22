@@ -1,6 +1,6 @@
 // Un objeto por proyecto. Ejemplo: featured: false lo muestra entre los proyectos académicos.
 // cover y gallery permiten indicar rutas alternativas. artwork es la portada conceptual de respaldo.
-// links.figma recibe el enlace directo al prototipo.
+// links.figma recibe el enlace directo. links.figmaEmbed recibe el atributo src del iframe de Figma.
 import type { Project } from "../types/content";
 
 // EDITA AQUÍ
@@ -97,6 +97,8 @@ export const projects: readonly Project[] = [
     links: {
       figma:
         "https://www.figma.com/proto/fJfCcENh8aZRvPBOaPgOVK/App_encuestas?node-id=27-4662&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=225%3A1838",
+      figmaEmbed:
+        "https://embed.figma.com/proto/fJfCcENh8aZRvPBOaPgOVK/App_encuestas?node-id=27-4662&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=225%3A1838&embed-host=share",
     },
     // TODO: agregar la captura de la bitácora en Figma y, si se autoriza, su equivalente en Flutter sin datos reales.
   },
@@ -200,6 +202,8 @@ export const projects: readonly Project[] = [
     links: {
       figma:
         "https://www.figma.com/proto/ruloGZQSNj4c6UlWRHGPXI/App_limpieza?node-id=51-69&starting-point-node-id=51%3A39",
+      figmaEmbed:
+        "https://embed.figma.com/proto/ruloGZQSNj4c6UlWRHGPXI/App_limpieza?node-id=51-69&starting-point-node-id=51%3A39&embed-host=share",
     },
     // TODO: agregar portada y capturas de la aplicación.
   },

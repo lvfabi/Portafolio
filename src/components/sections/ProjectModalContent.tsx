@@ -10,6 +10,7 @@ import { Button } from "../ui/Button";
 import { ProjectCover } from "../ui/ProjectCover";
 import { Tags } from "../ui/Tags";
 import { ProjectGallery } from "./ProjectGallery";
+import { ProjectPrototype } from "./ProjectPrototype";
 import { ProjectTools } from "./ProjectTools";
 
 export function ProjectModalContent({ project }: { project: Project }) {
@@ -28,16 +29,12 @@ export function ProjectModalContent({ project }: { project: Project }) {
     <div key="title">
       {project.period && <p className="project-period">{project.period}</p>}
       <h2 id="project-modal-title">{project.title}</h2>
-      {project.links?.figma && (
-        <Button
+      {(project.links?.figma || project.links?.figmaEmbed) && (
+        <ProjectPrototype
+          embed={project.links.figmaEmbed}
           href={project.links.figma}
-          variant="text"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {site.openPrototype}
-          <Icon name="arrow" />
-        </Button>
+          projectTitle={project.title}
+        />
       )}
     </div>,
     <div key="role">
