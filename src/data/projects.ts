@@ -9,7 +9,7 @@ export const projects: readonly Project[] = [
     slug: "imprenta-fuentes",
     artwork: {
       src: "images/illustrations/imprenta-fuentes.webp",
-      alt: "Ilustración conceptual de hojas de impresión con una lista de comprobación y una lupa.",
+      alt: "Ilustración conceptual de hojas de impresión junto a una lista de comprobación.",
     },
     title: "Sistema de Gestión Imprenta Fuentes · QA Lead",
     period: "2026",
