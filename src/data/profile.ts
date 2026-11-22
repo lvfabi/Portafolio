@@ -16,16 +16,15 @@ export const profile = {
   availability:
     "Disponible para práctica profesional · dic 2026 – abr 2027 · 315 h",
   heroTitle: [
-    { kind: "text", value: "Hola, soy Fabiola. Escribo " },
-    { kind: "highlight", value: "código limpio" },
-    { kind: "text", value: " y diseño " },
-    { kind: "italic", value: "interfaces" },
-    { kind: "text", value: " que ayudan " },
-    { kind: "icon", value: "sparkle" },
-    { kind: "text", value: " a las personas y se sienten " },
-    { kind: "italic", value: "naturales" },
+    { kind: "text", value: "Hola, soy Fabiola. Me mueve " },
+    { kind: "highlight", value: "innovar" },
+    { kind: "text", value: " y " },
+    { kind: "italic", value: "ayudar" },
     { kind: "text", value: " " },
+    { kind: "icon", value: "sparkle" },
+    { kind: "text", value: ": de la idea al diseño, el código y las pruebas " },
     { kind: "icon", value: "flower" },
+    { kind: "text", value: "." },
   ] satisfies HeroSegment[],
   heroSubtitle:
     "Estudiante de quinto año de Ingeniería Civil en Informática. Me gusta aprender, innovar y ayudar: trabajo desde los requerimientos y el diseño en Figma hasta Flutter, pruebas y modelos de IA.",

@@ -9,6 +9,7 @@ export function HeroTitle() {
   const label = profile.heroTitle
     .map((segment) => (segment.kind === "icon" ? "" : segment.value))
     .join("")
+    .replace(/\s+([:.])/g, "$1")
     .replace(/\s+/g, " ")
     .trim();
   const offsets = profile.heroTitle.map((_, index) =>
