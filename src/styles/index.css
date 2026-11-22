@@ -1021,3 +1021,46 @@ html:has(.project-dialog[open]) {
   opacity: 1 !important;
   clip-path: none !important;
 }
+
+.project-tools {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.project-tools > div {
+  border-left: 1px solid var(--color-line);
+  padding-inline-start: 12px;
+}
+
+.project-tools dt {
+  font-weight: 600;
+}
+
+.project-evaluated-stack {
+  margin-top: 16px;
+}
+
+.project-prototype-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+
+.project-prototype-frame {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-cover);
+  background: var(--color-bg);
+}
+
+@media (width >= 768px) {
+  .project-prototype-frame {
+    aspect-ratio: 16 / 9;
+  }
+}

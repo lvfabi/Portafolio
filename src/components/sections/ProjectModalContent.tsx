@@ -10,6 +10,8 @@ import { Button } from "../ui/Button";
 import { PortfolioImage } from "../ui/PortfolioImage";
 import { Tags } from "../ui/Tags";
 import { ProjectGallery } from "./ProjectGallery";
+import { ProjectPrototype } from "./ProjectPrototype";
+import { ProjectTools } from "./ProjectTools";
 
 export function ProjectModalContent({ project }: { project: Project }) {
   const reduced = useReducedMotion();
@@ -33,12 +35,24 @@ export function ProjectModalContent({ project }: { project: Project }) {
       <h3>{site.role}</h3>
       <p>{project.role}</p>
     </div>,
-    <div key="description" className="modal-description">
-      {project.description.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
-      ))}
-    </div>,
+    project.tools?.length || project.evaluatedStack?.length ? (
+      <ProjectTools key="tools" project={project} />
+    ) : null,
+    project.description.length > 0 && (
+      <div key="description" className="modal-description">
+        {project.description.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+    ),
     project.stack.length > 0 && <Tags key="stack" items={project.stack} />,
+    project.figmaEmbed && (
+      <ProjectPrototype
+        key="prototype"
+        src={project.figmaEmbed}
+        projectTitle={project.title}
+      />
+    ),
     <ProjectGallery key="gallery" project={project} />,
     links.length > 0 && (
       <div key="links" className="actions">
