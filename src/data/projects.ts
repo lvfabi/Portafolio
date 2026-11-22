@@ -108,8 +108,15 @@ export const projects: readonly Project[] = [
       src: "images/illustrations/control-termico.webp",
       alt: "Ilustración conceptual de una maqueta con ventilador, termómetro y flujo de aire.",
     },
+    cover: {
+      src: "images/projects/control-termico/gallery-1.webp",
+      alt: "Maqueta de control térmico y monitor web en la mesa de exposición.",
+      width: 780,
+      height: 1040,
+      position: "center 93%",
+    },
     title: "Control térmico de un centro de datos a escala",
-    // TODO: confirmar período.
+    period: "2026",
     featured: true,
     summary:
       "Maqueta con control de ventilación y monitoreo web de temperatura.",
@@ -148,7 +155,29 @@ export const projects: readonly Project[] = [
           "Desarrollé una interfaz web que mostraba la temperatura en tiempo real, el estado del ventilador, un gráfico de mediciones y el historial de alertas y registros sobre 32 °C.",
       },
     ],
-    // TODO: agregar al carrusel el modelo 3D, la maqueta ensamblada y el monitor web, en ese orden.
+    gallery: [
+      {
+        src: "images/projects/control-termico/gallery-1.webp",
+        caption: "Maqueta y monitoreo web",
+        alt: "Maqueta ensamblada junto a un portátil que muestra el monitor web de temperatura.",
+        width: 780,
+        height: 1040,
+      },
+      {
+        src: "images/projects/control-termico/gallery-2.webp",
+        caption: "Póster técnico",
+        alt: "Póster del proyecto con la metodología, el circuito y los resultados de la simulación.",
+        width: 914,
+        height: 1280,
+      },
+      {
+        src: "images/projects/control-termico/gallery-3.webp",
+        caption: "Presentación de la maqueta",
+        alt: "Presentación del proyecto con la maqueta, el póster y el monitor web en el campus.",
+        width: 780,
+        height: 1040,
+      },
+    ],
   },
   {
     slug: "cleany",

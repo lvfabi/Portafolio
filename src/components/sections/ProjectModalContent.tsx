@@ -16,7 +16,9 @@ import { ProjectTools } from "./ProjectTools";
 export function ProjectModalContent({ project }: { project: Project }) {
   const reduced = useReducedMotion();
   const cover = publicAsset(
-    project.cover ?? `images/projects/${project.slug}/cover.webp`,
+    typeof project.cover === "object"
+      ? project.cover.src
+      : (project.cover ?? `images/projects/${project.slug}/cover.webp`),
   );
   const links = [
     { label: site.demo, href: project.links?.demo },

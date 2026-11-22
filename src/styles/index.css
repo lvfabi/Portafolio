@@ -757,17 +757,43 @@ html:has(.project-dialog[open]) {
   padding-bottom: 8px;
   scroll-snap-type: x mandatory;
 }
+.gallery-track--portrait {
+  grid-auto-columns: min(86%, 400px);
+}
+.gallery-item {
+  min-width: 0;
+  scroll-snap-align: start;
+}
 .gallery-tile {
   overflow: hidden;
   aspect-ratio: 16 / 10;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-cover);
-  scroll-snap-align: start;
+}
+.gallery-tile--portrait {
+  aspect-ratio: 3 / 4;
+  background: var(--color-bg);
+}
+.gallery-tile--portrait .portfolio-image {
+  object-fit: contain;
 }
 .project-gallery figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 12px;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 5px;
   color: var(--color-ink-soft);
   font-size: var(--text-pill);
+}
+.project-gallery figcaption a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-rose-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 @media (width >= 768px) {
   .project-dialog {

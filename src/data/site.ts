@@ -31,6 +31,8 @@ export const site = {
   prototypeTitle: (title: string) => `Prototipo de ${title} en Figma`,
   close: "Cerrar detalle del proyecto",
   gallery: "Galería",
+  fullSize: "Ver a tamaño completo",
+  fullSizeLabel: (caption: string) => `Ver a tamaño completo: ${caption}`,
   imagePlaceholder: "Ilustración de relleno",
   coverAlt: (title: string) => `Portada de ${title}`,
   galleryAlt: (title: string, index: number) => `Captura ${index} de ${title}`,

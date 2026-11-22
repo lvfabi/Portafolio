@@ -6,6 +6,7 @@ type ImageSource = {
   alt: string;
   width: number;
   height: number;
+  position?: string;
 };
 
 export function PortfolioImage({
@@ -13,12 +14,15 @@ export function PortfolioImage({
   alt,
   width,
   height,
+  position,
   fallback,
   portrait = false,
 }: ImageSource & { fallback?: ImageSource; portrait?: boolean }) {
   const [failed, setFailed] = useState<string[]>([]);
   const image =
-    src && !failed.includes(src) ? { src, alt, width, height } : fallback;
+    src && !failed.includes(src)
+      ? { src, alt, width, height, position }
+      : fallback;
   if (!image?.src || failed.includes(image.src))
     return <ImagePlaceholder portrait={portrait} decorative={!alt} />;
 
@@ -34,6 +38,7 @@ export function PortfolioImage({
       height={image.height}
       loading="lazy"
       decoding="async"
+      style={image.position ? { objectPosition: image.position } : undefined}
       onError={() => setFailed((paths) => [...paths, imageSrc])}
     />
   );

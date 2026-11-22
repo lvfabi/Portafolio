@@ -10,16 +10,21 @@ export function ProjectCover({
   project: Project;
   decorative?: boolean;
 }) {
+  const photo = typeof project.cover === "object" ? project.cover : undefined;
   const src = publicAsset(
-    project.cover ?? `images/projects/${project.slug}/cover.webp`,
+    photo?.src ??
+      (typeof project.cover === "string"
+        ? project.cover
+        : `images/projects/${project.slug}/cover.webp`),
   );
   const artwork = project.artwork;
   return (
     <PortfolioImage
       src={src}
-      alt={decorative ? "" : site.coverAlt(project.title)}
-      width={1600}
-      height={1000}
+      alt={decorative ? "" : (photo?.alt ?? site.coverAlt(project.title))}
+      width={photo?.width ?? 1600}
+      height={photo?.height ?? 1000}
+      position={photo?.position}
       fallback={
         artwork && {
           src: publicAsset(artwork.src),
