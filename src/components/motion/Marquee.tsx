@@ -1,7 +1,7 @@
 import { animate, m, useMotionValue } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
-import { timings } from "../../lib/motion";
+import { marqueeSpeed } from "../../lib/motion";
 import { Decorative } from "../icons/Decorative";
 
 export function Marquee({
@@ -14,15 +14,28 @@ export function Marquee({
   const reduced = useReducedMotion();
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
-  const x = useMotionValue("0%");
+  const [groupWidth, setGroupWidth] = useState(0);
+  const group = useRef<HTMLUListElement>(null);
+  const x = useMotionValue(0);
   const playback = useRef<ReturnType<typeof animate> | null>(null);
   useEffect(() => {
+    const element = group.current;
+    if (reduced || !element) return;
+    const observer = new ResizeObserver(([entry]) => {
+      setGroupWidth(entry.contentRect.width);
+    });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [reduced]);
+
+  useEffect(() => {
     if (reduced) {
-      x.set("0%");
+      x.set(0);
       return;
     }
-    const controls = animate(x, ["0%", "-50%"], {
-      duration: timings.marquee,
+    if (!groupWidth) return;
+    const controls = animate(x, [0, -groupWidth], {
+      duration: groupWidth / marqueeSpeed,
       ease: "linear",
       repeat: Infinity,
     });
@@ -31,11 +44,11 @@ export function Marquee({
       controls.stop();
       playback.current = null;
     };
-  }, [reduced, x]);
+  }, [groupWidth, reduced, x]);
   useEffect(() => {
     if (hovered || focused) playback.current?.pause();
     else playback.current?.play();
-  }, [focused, hovered, reduced]);
+  }, [focused, groupWidth, hovered, reduced]);
   return (
     <div
       className="skills-marquee"
@@ -52,6 +65,7 @@ export function Marquee({
           <ul
             className="marquee-group"
             key={String(duplicate)}
+            ref={duplicate ? undefined : group}
             aria-hidden={duplicate || undefined}
           >
             {items.map((item) => (

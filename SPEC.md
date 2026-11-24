@@ -227,7 +227,7 @@ A8. Botones
 • Hover: el fondo pasa a --pink-400 con texto --ink en 250ms, y la flecha interior se desplaza 4px.
 • Presionado: scale .97.
 A9. Franja de habilidades
-translateX(0→-50%) en 40s lineal infinita, con pausa en hover y en foco.
+Desplazamiento lineal continuo a 32 px/s. La duración se calcula a partir del ancho de la lista. Se pausa al pasar el puntero o al recibir el foco.
 A10. Modal de proyecto
 • Layout compartido de 450ms con spring (stiffness: 300, damping: 32).
 • Fondo oscuro --ink al 40% con blur(4px), 250ms.

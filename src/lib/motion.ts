@@ -16,6 +16,7 @@ export const dialogSpring = {
   visualDuration: 0.45,
 } as const;
 export const fade: Transition = { duration: 0.2 };
+export const marqueeSpeed = 32;
 export const timings = {
   logo: 0.6,
   heroWordStart: 0.15,
@@ -38,7 +39,6 @@ export const timings = {
   sectionLabel: 0.5,
   card: 0.9,
   cursor: 0.2,
-  marquee: 40,
   overlay: 0.25,
   dialogContent: 0.2,
   dialogStep: 0.06,
