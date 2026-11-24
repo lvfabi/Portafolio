@@ -16,8 +16,10 @@ export const profile = {
     width: 750,
     height: 1000,
   },
-  availability:
-    "Disponible para práctica profesional · dic 2026 – abr 2027 · 315 h",
+  availability: {
+    label: "Disponible para práctica profesional",
+    details: "dic 2026 – abr 2027 · 315 h",
+  },
   heroArtwork: "images/retro-computer.webp",
   heroTitle: [
     { kind: "text", value: "Hola, soy Fabiola." },

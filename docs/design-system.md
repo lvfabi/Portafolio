@@ -6,7 +6,7 @@ Concepto: "editorial suave". Layout limpio y tipografía editorial, con una pale
 
 ### Interfaz retro
 
-La interfaz retro se aplica a toda la página. Inter variable se usa en titulares, barras de ventana, botones, etiquetas y párrafos. El inicio y las once portadas conceptuales usan pixel art. La foto de perfil conserva el arco dentro de un marco retro y las fotos de proyectos se muestran con su resolución y encuadre. La paleta y los tiempos de animación se conservan.
+La interfaz retro se aplica a toda la página. Inter variable se usa en titulares, barras de ventana, botones, etiquetas y párrafos. El inicio y las once portadas conceptuales usan pixel art. La foto de perfil conserva el arco dentro de un marco retro y las fotos de proyectos se muestran con su resolución y encuadre. La paleta y los tiempos de animación se conservan. El panel de disponibilidad del inicio retoma los bordes y la sombra desplazada de las ventanas, con una barra rosa, un indicador cuadrado y las fechas y horas en una segunda línea.
 
 ### Colores (variables CSS)
 
@@ -97,7 +97,7 @@ A1. Entrada del hero (≈ 1.6 s en total)
 - t=150ms: el h1 entra palabra por palabra. Cada palabra sube dentro de una máscara (overflow: hidden): translateY(105%)→0, 900ms ease-out-expo, con 55ms entre palabras.
 - Hacia t=1.0s: el resaltado se dibuja de izquierda a derecha con background-size 0%→100% en 700ms ease-in-out.
 - 100ms después de su palabra, cada ícono inline entra con scale 0→1 y rotate -90°→0, spring de 500ms.
-- Desde t=700ms: párrafo, píldora de disponibilidad y botones suben con opacity 0→1 y translateY 16px→0, 700ms, con 100ms entre elementos.
+- Desde t=700ms: párrafo, panel de disponibilidad y botones suben con opacity 0→1 y translateY 16px→0, 700ms, con 100ms entre elementos.
 - El botón del header aparece hacia t=900ms.
 
 A2. Elementos decorativos en movimiento

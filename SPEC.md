@@ -84,7 +84,7 @@ Criterios de aceptación:
 2.  La frase resaltada “código limpio” tiene fondo --pink-200, color --rose-700, padding 0 .15em, radio 6px y box-decoration-break: clone para que se vea bien si salta de línea.
 3.  Los íconos inline miden 0.6em de alto, van alineados a la línea base y tienen aria-hidden. El destello va en --pink-400 y la flor en --lavender-300.
 4.  Bajo el titular va el párrafo (campo heroSubtitle): “Estudiante de quinto año de Ingeniería Civil en Informática. Me gusta aprender, innovar y ayudar: trabajo desde los requerimientos y el diseño en Figma hasta Flutter, pruebas y modelos de IA.”
-5.  Una píldora de disponibilidad con un punto --pink-400 que pulsa dice: “Disponible para práctica profesional · dic 2026 – abr 2027 · 315 h”. El texto vive en el campo availability de src/data/profile.ts.
+5.  Un panel de disponibilidad con borde fino y sombra desplazada muestra “Disponible para práctica profesional” en una barra rosa con un indicador cuadrado --pink-400 que pulsa. Debajo se leen las fechas y las horas. Los textos viven en availability.label y availability.details de src/data/profile.ts.
 6.  Dos llamadas a la acción: botón primario “Ver proyectos” y enlace secundario “Descargar CV” con flecha.
 7.  El hero NO ocupa toda la pantalla. En 1366×768 deben verse el hero completo y el borde superior de las primeras tarjetas, para invitar a hacer scroll, como en la referencia.
 Requisito 3: Proyectos
@@ -202,7 +202,7 @@ A1. Secuencia de entrada del hero (≈ 1.6 s en total)
 • t=150ms: el h1 entra palabra por palabra. Cada palabra sube dentro de una máscara (overflow: hidden): translateY(105%)→0, 900ms ease-out-expo, con retraso de 55ms entre palabras.
 • Hacia t=1.0s: el resaltado se dibuja de izquierda a derecha con background-size 0%→100% en 700ms ease-in-out.
 • 100ms después de su palabra, cada ícono inline entra con scale 0→1 y rotate -90°→0, spring de 500ms.
-• Desde t=700ms: párrafo, píldora de disponibilidad y botones suben con opacity 0→1 y translateY 16px→0, 700ms, con 100ms entre elementos.
+• Desde t=700ms: párrafo, panel de disponibilidad y botones suben con opacity 0→1 y translateY 16px→0, 700ms, con 100ms entre elementos.
 • El botón del header aparece hacia t=900ms.
 A2. Elementos decorativos en movimiento
 • Destello inline: rotación 0→360° en 14s lineal infinita, con pulso de escala 1→1.15→1 cada 3s.
@@ -299,7 +299,7 @@ type Profile = {
   email: string;
   linkedin: string;
   github?: string;          // vacío: el botón no se muestra
-  availability: string;
+  availability: { label: string; details: string };
   heroTitle: HeroSegment[];
   heroSubtitle: string;
   about: string[];          // párrafos de 'Sobre mí'

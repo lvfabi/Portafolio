@@ -17,9 +17,11 @@ export function Hero() {
     <p key="intro" className="hero-intro">
       {profile.heroSubtitle}
     </p>,
-    <p key="availability" className="pill availability">
-      <span aria-hidden="true" />
-      {profile.availability}
+    <p key="availability" className="availability">
+      <span className="availability-label">{profile.availability.label}</span>{" "}
+      <span className="availability-details">
+        {profile.availability.details}
+      </span>
     </p>,
     <div key="actions" className="actions">
       <SectionLink target={anchors.projects} variant="primary">
