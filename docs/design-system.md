@@ -6,7 +6,7 @@ Concepto: "editorial suave". Layout limpio y tipografía editorial, con una pale
 
 ### Interfaz retro
 
-La interfaz retro se aplica al encabezado, al inicio, a las secciones, a las fichas de proyectos y al pie de página. El titular de inicio usa Instrument Serif y un computador original en pixel art. Las secciones usan marcos de ventana en la paleta pastel, barras de título en DM Sans y sombras escalonadas en rosa. Los botones y las tarjetas adoptan esquinas de 4 a 8 px. La foto de perfil conserva el arco.
+La interfaz retro se aplica a toda la página. Pixelify Sans se usa en titulares, barras de ventana, botones y etiquetas. DM Sans conserva la lectura de los párrafos. El inicio y las once portadas conceptuales usan pixel art. La foto de perfil conserva el arco dentro de un marco retro y las fotos de proyectos se muestran con su resolución y encuadre. La paleta y los tiempos de animación se conservan.
 
 ### Colores (variables CSS)
 
@@ -28,9 +28,9 @@ Contraste: --rose-700 sobre --pink-200 da 5.3:1. --ink sobre --bg supera 14:1. -
 
 ### Tipografía
 
-- Titulares: Instrument Serif (regular y cursiva real, sin cursiva sintética), con @fontsource/instrument-serif. Respaldo: Georgia, 'Times New Roman', serif.
-- Cuerpo e interfaz: DM Sans variable (pesos 400, 500, 600), con @fontsource-variable/dm-sans. Respaldo: system-ui, sans-serif.
-- H1: clamp(2.5rem, 1.5rem + 4.5vw, 4.5rem), interlineado 1.08, tracking -0.02em, ancho máximo 22ch.
+- Titulares y controles: Pixelify Sans variable con @fontsource-variable/pixelify-sans. Respaldo: Courier New, monospace. El énfasis del titular usa oblicua.
+- Cuerpo y párrafos: DM Sans variable (pesos 400, 500, 600), con @fontsource-variable/dm-sans. Respaldo: system-ui, sans-serif.
+- H1: clamp(1.875rem, 1.39rem + 2.25vw, 2.875rem), interlineado 1.08, tracking -0.025em en la columna del inicio.
 - H2: clamp(2rem, 1.4rem + 2.6vw, 3rem), interlineado 1.1.
 - Cuerpo: 1rem con interlineado 1.65 (1.125rem desde 1024px), color --ink-soft, ancho máximo 56ch.
 - Píldoras y etiquetas: 0.875rem, peso 500.

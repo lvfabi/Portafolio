@@ -26,6 +26,7 @@ export function ProjectCover({
           alt: decorative ? "" : artwork.alt,
           width: 960,
           height: 600,
+          pixelated: true,
         }
       }
     />

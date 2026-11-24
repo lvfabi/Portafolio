@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "@fontsource/instrument-serif/latin-400.css";
-import "@fontsource/instrument-serif/latin-400-italic.css";
+import "@fontsource-variable/pixelify-sans/wght.css";
 import "@fontsource-variable/dm-sans/wght.css";
 import "lenis/dist/lenis.css";
 import "./styles/index.css";

@@ -26,9 +26,12 @@ export const profile = {
     { kind: "highlight", value: "innovar" },
     { kind: "text", value: " y " },
     { kind: "italic", value: "ayudar" },
-    { kind: "text", value: " " },
+    { kind: "text", value: "\u00a0" },
     { kind: "icon", value: "sparkle" },
-    { kind: "text", value: " de la idea al diseño, el código y las pruebas " },
+    {
+      kind: "text",
+      value: " de la idea al diseño, el código y las pruebas\u00a0",
+    },
     { kind: "icon", value: "flower" },
   ] satisfies HeroSegment[],
   heroSubtitle:
