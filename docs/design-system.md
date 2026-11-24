@@ -4,6 +4,10 @@
 
 Concepto: "editorial suave". Layout limpio y tipografía editorial, con una paleta rosa pastel cálida, detalles florales dibujados a mano y esquinas muy redondeadas. El color se usa en acentos y fondos suaves. El texto siempre va en ciruela oscuro. Nada de brillos, degradados fuertes ni rosa saturado. Máximo 2 colores de acento visibles por pantalla.
 
+### Interfaz retro
+
+La paleta y las familias tipográficas se conservan. El inicio acompaña el titular con un computador original en pixel art y usa una jerarquía más compacta. Las tarjetas, etiquetas y botones adoptan esquinas de 4 a 8 px y sombras escalonadas en rosa. Los títulos de las tarjetas usan DM Sans para identificar los proyectos rápidamente.
+
 ### Colores (variables CSS)
 
 - --bg: #FFF7F5 (fondo general)

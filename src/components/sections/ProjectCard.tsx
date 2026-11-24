@@ -40,7 +40,7 @@ export function ProjectCard({
         initial={
           reduced
             ? { opacity: 0 }
-            : { opacity: 0, clipPath: "inset(12% 6% 12% 6% round 28px)" }
+            : { opacity: 0, clipPath: "inset(12% 6% 12% 6% round 8px)" }
         }
         animate={
           inView
@@ -48,7 +48,7 @@ export function ProjectCard({
               ? { opacity: 1 }
               : {
                   opacity: 1,
-                  clipPath: "inset(0% 0% 0% 0% round 28px)",
+                  clipPath: "inset(0% 0% 0% 0% round 8px)",
                   transitionEnd: { clipPath: "none" },
                 }
             : undefined

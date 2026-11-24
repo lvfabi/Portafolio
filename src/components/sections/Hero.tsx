@@ -6,7 +6,6 @@ import { publicAsset } from "../../lib/assets";
 import { anchors } from "../../lib/constants";
 import { easeExpo, fade, timings } from "../../lib/motion";
 import { Icon } from "../icons/Icon";
-import { HeroDecor } from "../motion/HeroDecor";
 import { HeroTitle } from "../motion/HeroTitle";
 import { Button } from "../ui/Button";
 import { SectionLink } from "../ui/SectionLink";
@@ -43,7 +42,6 @@ export function Hero() {
       tabIndex={-1}
       aria-labelledby="inicio-titulo"
     >
-      <HeroDecor />
       <div className="hero-content">
         <HeroTitle />
         {content.map((child, index) => (
@@ -66,6 +64,14 @@ export function Hero() {
             {child}
           </m.div>
         ))}
+      </div>
+      <div className="hero-visual" aria-hidden="true">
+        <img
+          src={publicAsset(profile.heroArtwork)}
+          width={416}
+          height={312}
+          alt=""
+        />
       </div>
     </section>
   );
