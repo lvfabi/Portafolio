@@ -25,12 +25,12 @@ Colores (variables CSS)
 • --line: #EBD9DE (bordes finos de 1px)
 • --pink-100: #FDE4EC (fondo de tarjetas y píldoras)
 • --pink-200: #FBD3E0 (fondo del texto resaltado)
-• --pink-400: #F29BB7 (decorativo, hover del botón, flor del logo, barra de progreso)
+• --pink-400: #F29BB7 (decorativo, hover del botón, corazón del logo, barra de progreso)
 • --rose-700: #A12356 (texto sobre el resaltado, enlaces, foco)
 • --lavender-100: #EDE7FB (tarjetas y píldoras alternas)
 • --lavender-300: #C9B8F2 (destellos y flor decorativa)
 • --peach-100: #FFE9DC (tarjetas y píldoras alternas)
-• --butter-300: #FFE08A (centro de la flor del logo)
+• --butter-300: #FFE08A (detalles de las ilustraciones)
 Reglas de contraste: --rose-700 sobre --pink-200 da 5.3:1. --ink sobre --bg supera 14:1. --pink-400 nunca se usa como color de texto. Los degradados solo se permiten como fondo de imágenes placeholder, entre --pink-100 y --lavender-100 a 135°.
 Tipografía
 • Inter variable para títulos, controles y párrafos, instalada con @fontsource-variable/inter. Respaldo: system-ui, sans-serif.
@@ -45,7 +45,7 @@ Formas y espaciado
 • Sombra de tarjeta: 0 24px 48px -24px rgba(242,155,183,.55). No usar sombras grises ni negras.
 • Bordes: 1px solid var(--line).
 Logo e íconos
-• Logo (componente Logo, 48px): flor dibujada a mano de 8 pétalos algo irregulares, en --pink-400, con centro --butter-300 y una carita sonriente simple en --ink (dos puntos y una curva). El contorno debe verse ligeramente ondulado, como trazo de lápiz. Hover: gira 20° y guiña (un ojo se cierra). Se reutiliza como favicon.
+• Logo (componente Logo, 48px). Corazón rosa en pixel art con contorno escalonado en --ink. Gira 20° al pasar el puntero. El mismo SVG se usa como favicon.
 • Íconos decorativos en SVG propios, con aspecto dibujado a mano: destello de cuatro puntas, flor de cinco pétalos y corazón pequeño. No usar emojis.
 • Íconos de marcas (LinkedIn, GitHub) como SVG propios en src/components/icons. Íconos funcionales (flecha, cerrar, descargar) pueden venir de lucide-react.
 4. Stack técnico
@@ -86,7 +86,7 @@ Criterios de aceptación:
 4.  Bajo el titular va el párrafo (campo heroSubtitle): “Estudiante de quinto año de Ingeniería Civil en Informática. Me gusta aprender, innovar y ayudar: trabajo desde los requerimientos y el diseño en Figma hasta Flutter, pruebas y modelos de IA.”
 5.  Un panel de disponibilidad con borde fino y sombra desplazada muestra “Disponible para práctica profesional” en una barra rosa con un indicador cuadrado --pink-400 que pulsa. Debajo se leen las fechas y las horas. Los textos viven en availability.label y availability.details de src/data/profile.ts.
 6.  Dos llamadas a la acción: botón primario “Ver proyectos” y enlace secundario “Descargar CV” con flecha.
-7.  El hero NO ocupa toda la pantalla. En 1366×768 deben verse el hero completo y el borde superior de las primeras tarjetas, para invitar a hacer scroll, como en la referencia.
+7.  El hero NO ocupa toda la pantalla. En 1366×768 deben verse el hero completo y el borde superior de las primeras tarjetas, para invitar a hacer scroll, como en la referencia. La ilustración del computador se muestra a partir de 768 px de ancho y 480 px de alto.
 Requisito 3: Proyectos
 Historia de usuario: Como reclutador quiero ver rápidamente los proyectos con su rol y tecnologías.
 Criterios de aceptación:
@@ -179,7 +179,7 @@ Colores y tipografías
 src/styles/index.css
 Variables dentro de @theme
 Favicon e imagen al compartir el enlace
-public/favicon.svg y public/og-image.png
+public/favicon-heart.svg y public/og-image.png
 La imagen al compartir mide 1200×630 px
 Título y descripción para buscadores
 index.html
@@ -260,7 +260,7 @@ CUANDO el sistema tenga prefers-reduced-motion: reduce, ENTONCES el sitio DEBER�
 • Imágenes en WebP o AVIF con width y height, srcset, y loading="lazy" bajo el pliegue. El hero no lleva imágenes pesadas.
 • Fuentes: cargar solo los pesos usados, con preload de Inter regular e itálica y font-display: swap.
 • JavaScript inicial menor a 180 KB comprimido (gzip), con el modal cargado de forma diferida.
-• title: “Fabiola Level | Práctica en desarrollo de software, diseño de interfaces, QA e IA”. Agregar meta description, Open Graph y Twitter Card (imagen de 1200×630 con la estética de la página), favicon (SVG de la flor y PNG de 32 y 180px), robots.txt y sitemap.xml.
+• title: “Fabiola Level | Práctica en desarrollo de software, diseño de interfaces, QA e IA”. Agregar meta description, Open Graph y Twitter Card (imagen de 1200×630 con la estética de la página), favicon (SVG del corazón y PNG de 32 y 180px), robots.txt y sitemap.xml.
 10. Estructura de carpetas sugerida
 README.md
 index.html
@@ -282,7 +282,7 @@ src/
 public/
   images/profile/fabiola.webp
   images/projects/<slug>/cover.webp, gallery-1.webp, gallery-2.webp
-  CV_Fabiola_Level.pdf, favicon.svg, og-image.png,
+  CV_Fabiola_Level.pdf, favicon-heart.svg, og-image.png,
   robots.txt, sitemap.xml
 scripts/
   check-content.mjs   (lista los TODO pendientes)

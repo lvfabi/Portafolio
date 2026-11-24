@@ -6,7 +6,7 @@ Concepto: "editorial suave". Layout limpio y tipografía editorial, con una pale
 
 ### Interfaz retro
 
-La interfaz retro se aplica a toda la página. Inter variable se usa en titulares, barras de ventana, botones, etiquetas y párrafos. El inicio y las once portadas conceptuales usan pixel art. La foto de perfil conserva el arco dentro de un marco retro y las fotos de proyectos se muestran con su resolución y encuadre. La paleta y los tiempos de animación se conservan. El panel de disponibilidad del inicio retoma los bordes y la sombra desplazada de las ventanas, con una barra rosa, un indicador cuadrado y las fechas y horas en una segunda línea.
+La interfaz retro se aplica a toda la página. Inter variable se usa en titulares, barras de ventana, botones, etiquetas y párrafos. El inicio y las once portadas conceptuales usan pixel art. La ilustración del computador del inicio aparece a partir de 768 px de ancho y 480 px de alto. La foto de perfil conserva el arco dentro de un marco retro y las fotos de proyectos se muestran con su resolución y encuadre. La paleta y los tiempos de animación se conservan. El panel de disponibilidad del inicio retoma los bordes y la sombra desplazada de las ventanas, con una barra rosa, un indicador cuadrado y las fechas y horas en una segunda línea.
 
 ### Colores (variables CSS)
 
@@ -17,12 +17,12 @@ La interfaz retro se aplica a toda la página. Inter variable se usa en titulare
 - --line: #EBD9DE (bordes finos de 1px)
 - --pink-100: #FDE4EC (fondo de tarjetas y píldoras)
 - --pink-200: #FBD3E0 (fondo del texto resaltado)
-- --pink-400: #F29BB7 (decorativo, hover del botón, flor del logo, barra de progreso)
+- --pink-400: #F29BB7 (decorativo, hover del botón, corazón del logo, barra de progreso)
 - --rose-700: #A12356 (texto sobre el resaltado, enlaces, foco)
 - --lavender-100: #EDE7FB (tarjetas y píldoras alternas)
 - --lavender-300: #C9B8F2 (destellos y flor decorativa)
 - --peach-100: #FFE9DC (tarjetas y píldoras alternas)
-- --butter-300: #FFE08A (centro de la flor del logo)
+- --butter-300: #FFE08A (detalles de las ilustraciones)
 
 Contraste: --rose-700 sobre --pink-200 da 5.3:1. --ink sobre --bg supera 14:1. --pink-400 nunca se usa como color de texto. Los degradados solo se permiten como fondo de imágenes placeholder, entre --pink-100 y --lavender-100 a 135°.
 
@@ -44,7 +44,7 @@ Contraste: --rose-700 sobre --pink-200 da 5.3:1. --ink sobre --bg supera 14:1. -
 
 ### Logo e íconos
 
-- Logo (componente Logo, 48px): flor dibujada a mano de 8 pétalos algo irregulares, en --pink-400, con centro --butter-300 y una carita sonriente simple en --ink. El contorno debe verse ligeramente ondulado, como trazo de lápiz. Hover: gira 20° y guiña. Se reutiliza como favicon.
+- Logo (componente Logo, 48px). Corazón rosa en pixel art con contorno escalonado en --ink. Gira 20° al pasar el puntero. El mismo SVG se usa como favicon.
 - Íconos decorativos en SVG propios, con aspecto dibujado a mano: destello de cuatro puntas, flor de cinco pétalos y corazón pequeño. No usar emojis.
 - Íconos de marcas (LinkedIn, GitHub) como SVG propios en src/components/icons. Íconos funcionales (flecha, cerrar, descargar) pueden venir de lucide-react.
 

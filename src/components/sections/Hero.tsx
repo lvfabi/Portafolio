@@ -1,4 +1,5 @@
 import { m } from "motion/react";
+import type { CSSProperties } from "react";
 import { profile } from "../../data/profile";
 import { site } from "../../data/site";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
@@ -13,6 +14,7 @@ import { SectionLink } from "../ui/SectionLink";
 export function Hero() {
   const reduced = useReducedMotion();
   const cv = publicAsset(profile.cv);
+  const artwork = publicAsset(profile.heroArtwork);
   const content = [
     <p key="intro" className="hero-intro">
       {profile.heroSubtitle}
@@ -67,14 +69,13 @@ export function Hero() {
           </m.div>
         ))}
       </div>
-      <div className="hero-visual" aria-hidden="true">
-        <img
-          src={publicAsset(profile.heroArtwork)}
-          width={416}
-          height={312}
-          alt=""
+      {artwork && (
+        <div
+          className="hero-visual"
+          style={{ "--hero-artwork": `url("${artwork}")` } as CSSProperties}
+          aria-hidden="true"
         />
-      </div>
+      )}
     </section>
   );
 }
