@@ -10,9 +10,26 @@ export const profile = {
   github: "",
   // TODO: agregar el PDF actualizado a public.
   cv: "CV_Fabiola_Level.pdf",
-  // TODO: reemplazar el retrato de relleno con la foto de perfil.
-  portrait: "images/profile/fabiola.webp",
-  portraitAlt: "Retrato de Fabiola Level",
+  portraits: [
+    {
+      src: "images/profile/fabiola.webp",
+      alt: "Retrato de Fabiola con suéter negro a rayas",
+      width: 750,
+      height: 1000,
+    },
+    {
+      src: "images/profile/fabiola-2.webp",
+      alt: "Retrato de Fabiola con blusa clara",
+      width: 750,
+      height: 1000,
+    },
+    {
+      src: "images/profile/fabiola-3.webp",
+      alt: "Retrato de Fabiola con blusa azul",
+      width: 562,
+      height: 1000,
+    },
+  ],
   availability:
     "Disponible para práctica profesional · dic 2026 – abr 2027 · 315 h",
   heroTitle: [
@@ -26,12 +43,13 @@ export const profile = {
     { kind: "icon", value: "sparkle" },
     { kind: "text", value: " de la idea al diseño, el código y las pruebas " },
     { kind: "icon", value: "flower" },
-    { kind: "text", value: "." },
   ] satisfies HeroSegment[],
   heroSubtitle:
     "Estudiante de quinto año de Ingeniería Civil en Informática. Me gusta aprender, innovar y ayudar: trabajo desde los requerimientos y el diseño en Figma hasta Flutter, pruebas y modelos de IA.",
   about: [
-    "Soy estudiante de quinto año de Ingeniería Civil en Informática en la Universidad Autónoma de Chile. Trabajo con Flutter, Figma, aseguramiento de calidad y aprendizaje automático. Fui QA Lead en el Sistema de Gestión Imprenta Fuentes y presido Mujeres en la Ingeniería.",
+    "Soy estudiante de quinto año de Ingeniería Civil en Informática en la Universidad Autónoma de Chile. Trabajo con Flutter, Figma, aseguramiento de calidad y aprendizaje automático. Fui QA Lead en el Sistema de Gestión Imprenta Fuentes.",
+    "Desde 2026 presido Mujeres en la Ingeniería en la Universidad Autónoma de Chile. El grupo es un espacio desde el que quiero aportar a la comunidad universitaria, conectar con otras estudiantes y dar más visibilidad a la participación de las mujeres en ingeniería.",
+    // TODO: incorporar actividades concretas del grupo cuando estén confirmadas.
     "Hoy preparo mi trabajo de título sobre trazabilidad de evidencia digital y busco una práctica profesional para aprender junto a un equipo y aportar con lo que sé.",
   ],
   facts: [

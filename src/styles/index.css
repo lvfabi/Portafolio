@@ -838,10 +838,37 @@ html:has(.project-dialog[open]) {
   background: var(--color-pink-200);
 }
 .portrait {
+  position: relative;
   overflow: hidden;
   aspect-ratio: 4 / 5;
   border-radius: 999px 999px 28px 28px;
   border: 1px solid var(--color-line);
+}
+.portrait-slide {
+  position: absolute;
+  inset: 0;
+}
+.portrait-slide .portfolio-image {
+  object-position: center 20%;
+}
+.portrait-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 8px;
+  margin-top: 18px;
+}
+.portrait-controls .portrait-arrow {
+  width: 44px;
+  padding: 0;
+}
+.portrait-arrow--previous .action-icon {
+  rotate: 180deg;
+}
+.portrait-progress {
+  color: var(--color-ink-soft);
+  font-size: var(--text-pill);
 }
 .image-placeholder--portrait .placeholder-frame {
   width: 58%;
