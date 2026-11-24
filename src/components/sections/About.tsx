@@ -1,8 +1,9 @@
 import { profile } from "../../data/profile";
 import { site } from "../../data/site";
+import { publicAsset } from "../../lib/assets";
 import { anchors } from "../../lib/constants";
 import { Reveal } from "../motion/Reveal";
-import { ProfilePortraits } from "./ProfilePortraits";
+import { PortfolioImage } from "../ui/PortfolioImage";
 
 export function About() {
   return (
@@ -12,8 +13,14 @@ export function About() {
       tabIndex={-1}
       aria-labelledby="about-title"
     >
-      <Reveal>
-        <ProfilePortraits />
+      <Reveal className="portrait-wrap">
+        <div className="portrait">
+          <PortfolioImage
+            {...profile.portrait}
+            src={publicAsset(profile.portrait.src)}
+            portrait
+          />
+        </div>
       </Reveal>
       <Reveal className="about-copy" order={1}>
         <h2 id="about-title">{site.about}</h2>

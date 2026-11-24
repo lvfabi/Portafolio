@@ -10,26 +10,12 @@ export const profile = {
   github: "",
   // TODO: agregar el PDF actualizado a public.
   cv: "CV_Fabiola_Level.pdf",
-  portraits: [
-    {
-      src: "images/profile/fabiola.webp",
-      alt: "Retrato de Fabiola con suéter negro a rayas",
-      width: 750,
-      height: 1000,
-    },
-    {
-      src: "images/profile/fabiola-2.webp",
-      alt: "Retrato de Fabiola con blusa clara",
-      width: 750,
-      height: 1000,
-    },
-    {
-      src: "images/profile/fabiola-3.webp",
-      alt: "Retrato de Fabiola con blusa azul",
-      width: 562,
-      height: 1000,
-    },
-  ],
+  portrait: {
+    src: "images/profile/fabiola.webp",
+    alt: "Retrato de Fabiola con suéter negro a rayas",
+    width: 750,
+    height: 1000,
+  },
   availability:
     "Disponible para práctica profesional · dic 2026 – abr 2027 · 315 h",
   heroTitle: [

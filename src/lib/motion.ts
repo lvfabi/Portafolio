@@ -39,7 +39,6 @@ export const timings = {
   card: 0.9,
   cursor: 0.2,
   marquee: 40,
-  portraitInterval: 6,
   overlay: 0.25,
   dialogContent: 0.2,
   dialogStep: 0.06,
