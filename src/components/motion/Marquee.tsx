@@ -2,7 +2,6 @@ import { animate, m, useMotionValue } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 import { marqueeSpeed } from "../../lib/motion";
-import { Decorative } from "../icons/Decorative";
 
 export function Marquee({
   items,
@@ -69,10 +68,7 @@ export function Marquee({
             aria-hidden={duplicate || undefined}
           >
             {items.map((item) => (
-              <li key={item}>
-                <Decorative kind="sparkle" />
-                {item}
-              </li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         ))}

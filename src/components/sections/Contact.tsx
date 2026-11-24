@@ -7,6 +7,7 @@ import { Decorative } from "../icons/Decorative";
 import { Icon } from "../icons/Icon";
 import { Reveal } from "../motion/Reveal";
 import { Button } from "../ui/Button";
+import { WindowHeading } from "../ui/WindowHeading";
 
 export function Contact() {
   const cv = publicAsset(profile.cv);
@@ -14,16 +15,14 @@ export function Contact() {
 
   return (
     <section
-      className="section-space contact"
+      className="section-space retro-window contact-window"
       id={anchors.contact}
       tabIndex={-1}
       aria-labelledby="contact-title"
     >
-      <Reveal className="contact-inner">
+      <WindowHeading id="contact-title" title={site.contactTitle} />
+      <Reveal className="window-content contact-inner">
         <Decorative kind="flower" className="contact-flower" />
-        <h2 id="contact-title">
-          <em>{site.contactTitle}</em>
-        </h2>
         <div className="actions contact-actions">
           {profile.email && (
             <Button

@@ -96,6 +96,7 @@ export default function ProjectModal({
         }
       >
         <div className="dialog-tools">
+          <h2 id="project-modal-title">{project.title}</h2>
           <button
             ref={closeRef}
             type="button"

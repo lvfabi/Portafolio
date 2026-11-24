@@ -3,8 +3,8 @@ import { useRef } from "react";
 import { site } from "../../data/site";
 import { timeline } from "../../data/timeline";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
-import { Decorative } from "../icons/Decorative";
 import { Reveal } from "../motion/Reveal";
+import { WindowHeading } from "../ui/WindowHeading";
 
 export function Timeline() {
   const timelineRef = useRef<HTMLOListElement>(null);
@@ -15,37 +15,35 @@ export function Timeline() {
   });
 
   return (
-    <section className="section-space" aria-labelledby="timeline-title">
-      <Reveal>
-        <h2 id="timeline-title" className="section-title">
-          {site.timeline}
-        </h2>
-      </Reveal>
-      <div className="timeline">
-        <m.div
-          className="timeline-line"
-          aria-hidden="true"
-          style={{ scaleY: reduced ? 1 : scrollYProgress }}
-        />
-        <ol ref={timelineRef}>
-          {timeline.map(({ title, organization, period }, index) => (
-            <li key={title}>
-              <Decorative
-                className="timeline-node"
-                kind={index % 2 ? "flower" : "sparkle"}
-              />
-              <Reveal
-                direction="right"
-                className="timeline-content"
-                order={index}
-              >
-                <p className="timeline-period">{period}</p>
-                <h3>{title}</h3>
-                <p>{organization}</p>
-              </Reveal>
-            </li>
-          ))}
-        </ol>
+    <section
+      className="section-space retro-window timeline-window"
+      aria-labelledby="timeline-title"
+    >
+      <WindowHeading id="timeline-title" title={site.timeline} />
+      <div className="window-content">
+        <div className="timeline">
+          <m.div
+            className="timeline-line"
+            aria-hidden="true"
+            style={{ scaleY: reduced ? 1 : scrollYProgress }}
+          />
+          <ol ref={timelineRef}>
+            {timeline.map(({ title, organization, period }, index) => (
+              <li key={title}>
+                <span className="timeline-node" aria-hidden="true" />
+                <Reveal
+                  direction="right"
+                  className="timeline-content"
+                  order={index}
+                >
+                  <p className="timeline-period">{period}</p>
+                  <h3>{title}</h3>
+                  <p>{organization}</p>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );

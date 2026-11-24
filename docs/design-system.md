@@ -6,7 +6,7 @@ Concepto: "editorial suave". Layout limpio y tipografía editorial, con una pale
 
 ### Interfaz retro
 
-La paleta y las familias tipográficas se conservan. El inicio acompaña el titular con un computador original en pixel art y usa una jerarquía más compacta. Las tarjetas, etiquetas y botones adoptan esquinas de 4 a 8 px y sombras escalonadas en rosa. Los títulos de las tarjetas usan DM Sans para identificar los proyectos rápidamente.
+La interfaz retro se aplica al encabezado, al inicio, a las secciones, a las fichas de proyectos y al pie de página. El titular de inicio usa Instrument Serif y un computador original en pixel art. Las secciones usan marcos de ventana en la paleta pastel, barras de título en DM Sans y sombras escalonadas en rosa. Los botones y las tarjetas adoptan esquinas de 4 a 8 px. La foto de perfil conserva el arco.
 
 ### Colores (variables CSS)
 

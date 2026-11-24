@@ -26,17 +26,18 @@ export function ProjectModalContent({ project }: { project: Project }) {
     },
   ].filter(({ href }) => href);
   const content = [
-    <div key="title">
-      {project.period && <p className="project-period">{project.period}</p>}
-      <h2 id="project-modal-title">{project.title}</h2>
-      {(project.links?.figma || project.links?.figmaEmbed) && (
-        <ProjectPrototype
-          embed={project.links.figmaEmbed}
-          href={project.links.figma}
-          projectTitle={project.title}
-        />
-      )}
-    </div>,
+    (project.period || project.links?.figma || project.links?.figmaEmbed) && (
+      <div key="resources">
+        {project.period && <p className="project-period">{project.period}</p>}
+        {(project.links?.figma || project.links?.figmaEmbed) && (
+          <ProjectPrototype
+            embed={project.links.figmaEmbed}
+            href={project.links.figma}
+            projectTitle={project.title}
+          />
+        )}
+      </div>
+    ),
     <div key="overview">
       <h3>{site.projectOverview}</h3>
       <p>{project.overview}</p>
