@@ -6,7 +6,7 @@ Concepto: "editorial suave". Layout limpio y tipografía editorial, con una pale
 
 ### Interfaz retro
 
-La interfaz retro se aplica a toda la página. Pixelify Sans se usa en titulares, barras de ventana, botones y etiquetas. DM Sans conserva la lectura de los párrafos. El inicio y las once portadas conceptuales usan pixel art. La foto de perfil conserva el arco dentro de un marco retro y las fotos de proyectos se muestran con su resolución y encuadre. La paleta y los tiempos de animación se conservan.
+La interfaz retro se aplica a toda la página. Inter variable se usa en titulares, barras de ventana, botones, etiquetas y párrafos. El inicio y las once portadas conceptuales usan pixel art. La foto de perfil conserva el arco dentro de un marco retro y las fotos de proyectos se muestran con su resolución y encuadre. La paleta y los tiempos de animación se conservan.
 
 ### Colores (variables CSS)
 
@@ -28,9 +28,8 @@ Contraste: --rose-700 sobre --pink-200 da 5.3:1. --ink sobre --bg supera 14:1. -
 
 ### Tipografía
 
-- Titulares y controles: Pixelify Sans variable con @fontsource-variable/pixelify-sans. Respaldo: Courier New, monospace. El énfasis del titular usa oblicua.
-- Cuerpo y párrafos: DM Sans variable (pesos 400, 500, 600), con @fontsource-variable/dm-sans. Respaldo: system-ui, sans-serif.
-- H1: clamp(1.875rem, 1.39rem + 2.25vw, 2.875rem), interlineado 1.08, tracking -0.025em en la columna del inicio.
+- Inter variable con @fontsource-variable/inter para títulos, controles y párrafos. Respaldo: system-ui, sans-serif. El énfasis del titular usa la cursiva de Inter.
+- H1: clamp(1.625rem, 1.31rem + 1.58vw, 2.78rem), peso 650, interlineado 1.12 y tracking -0.025em en la columna del inicio.
 - H2: clamp(2rem, 1.4rem + 2.6vw, 3rem), interlineado 1.1.
 - Cuerpo: 1rem con interlineado 1.65 (1.125rem desde 1024px), color --ink-soft, ancho máximo 56ch.
 - Píldoras y etiquetas: 0.875rem, peso 500.

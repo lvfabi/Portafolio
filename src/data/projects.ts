@@ -8,7 +8,7 @@ export const projects: readonly Project[] = [
   {
     slug: "imprenta-fuentes",
     artwork: {
-      src: "images/illustrations/imprenta-fuentes.webp",
+      src: "images/illustrations/imprenta-fuentes-pixel.webp",
       alt: "Ilustración conceptual de hojas de impresión junto a una lista de comprobación.",
     },
     title: "Sistema de Gestión Imprenta Fuentes · QA Lead",
@@ -56,7 +56,7 @@ export const projects: readonly Project[] = [
   {
     slug: "emocionalidad",
     artwork: {
-      src: "images/illustrations/emocionalidad.webp",
+      src: "images/illustrations/emocionalidad-pixel.webp",
       alt: "Ilustración conceptual de un diario de bienestar y un teléfono con símbolos de estado de ánimo.",
     },
     title: "Sistema de gestión de emocionalidad · Municipalidad de Providencia",
@@ -109,7 +109,7 @@ export const projects: readonly Project[] = [
   {
     slug: "control-termico",
     artwork: {
-      src: "images/illustrations/control-termico.webp",
+      src: "images/illustrations/control-termico-pixel.webp",
       alt: "Ilustración conceptual de una maqueta con ventilador, termómetro y flujo de aire.",
     },
     title: "Control térmico de un centro de datos a escala",
@@ -181,7 +181,7 @@ export const projects: readonly Project[] = [
   {
     slug: "cleany",
     artwork: {
-      src: "images/illustrations/cleany.webp",
+      src: "images/illustrations/cleany-pixel.webp",
       alt: "Ilustración conceptual de un mapa con ubicaciones marcadas y un teléfono.",
     },
     title: "Cleany · Aplicación móvil de asistencia por GPS",
@@ -240,7 +240,7 @@ export const projects: readonly Project[] = [
   {
     slug: "cifar-10",
     artwork: {
-      src: "images/illustrations/cifar-10.webp",
+      src: "images/illustrations/cifar-10-pixel.webp",
       alt: "Ilustración conceptual de una cuadrícula de imágenes que se conecta a nodos de clasificación.",
     },
     title: "Clasificación de imágenes con CNN · CIFAR-10",
@@ -288,7 +288,7 @@ export const projects: readonly Project[] = [
   {
     slug: "trabajo-de-titulo",
     artwork: {
-      src: "images/illustrations/trabajo-de-titulo.webp",
+      src: "images/illustrations/trabajo-de-titulo-pixel.webp",
       alt: "Ilustración conceptual de un expediente protegido con documentos ordenados en el tiempo.",
     },
     title: "Trabajo de título · Trazabilidad de antecedentes digitales",
@@ -348,7 +348,7 @@ export const projects: readonly Project[] = [
   {
     slug: "mochila",
     artwork: {
-      src: "images/illustrations/mochila.webp",
+      src: "images/illustrations/mochila-pixel.webp",
       alt: "Ilustración conceptual de una mochila junto a objetos de distintos pesos.",
     },
     title: "Optimización combinatoria · Mochila 0/1",
@@ -377,7 +377,7 @@ export const projects: readonly Project[] = [
   {
     slug: "simulacion-hidraulica",
     artwork: {
-      src: "images/illustrations/simulacion-hidraulica.webp",
+      src: "images/illustrations/simulacion-hidraulica-pixel.webp",
       alt: "Ilustración conceptual de dos tanques de agua conectados por tuberías.",
     },
     title: "Simulación de sistemas hidráulicos",
@@ -423,7 +423,7 @@ export const projects: readonly Project[] = [
   {
     slug: "satisfaccion-de-pasajeros",
     artwork: {
-      src: "images/illustrations/satisfaccion-de-pasajeros.webp",
+      src: "images/illustrations/satisfaccion-de-pasajeros-pixel.webp",
       alt: "Ilustración conceptual de una ventanilla de avión y un gráfico de satisfacción.",
     },
     title: "Clasificación de satisfacción de pasajeros",
@@ -468,7 +468,7 @@ export const projects: readonly Project[] = [
   {
     slug: "precios-de-vivienda-california",
     artwork: {
-      src: "images/illustrations/precios-de-vivienda-california.webp",
+      src: "images/illustrations/precios-de-vivienda-california-pixel.webp",
       alt: "Ilustración conceptual de viviendas y puntos de un gráfico de precios.",
     },
     title: "Estimación de precios de vivienda en California",
@@ -511,7 +511,7 @@ export const projects: readonly Project[] = [
   {
     slug: "desarrollo-web-django",
     artwork: {
-      src: "images/illustrations/desarrollo-web-django.webp",
+      src: "images/illustrations/desarrollo-web-django-pixel.webp",
       alt: "Ilustración conceptual de una ventana de navegador y las capas de una página web.",
     },
     title: "Desarrollo web con Django",

@@ -33,8 +33,7 @@ Colores (variables CSS)
 • --butter-300: #FFE08A (centro de la flor del logo)
 Reglas de contraste: --rose-700 sobre --pink-200 da 5.3:1. --ink sobre --bg supera 14:1. --pink-400 nunca se usa como color de texto. Los degradados solo se permiten como fondo de imágenes placeholder, entre --pink-100 y --lavender-100 a 135°.
 Tipografía
-• Titulares y controles: Pixelify Sans variable, instalada con @fontsource-variable/pixelify-sans. Respaldo: Courier New, monospace.
-• Cuerpo y párrafos: DM Sans variable (pesos 400, 500, 600), instalada con @fontsource-variable/dm-sans. Respaldo: system-ui, sans-serif.
+• Inter variable para títulos, controles y párrafos, instalada con @fontsource-variable/inter. Respaldo: system-ui, sans-serif.
 • H1: clamp(2.5rem, 1.5rem + 4.5vw, 4.5rem), interlineado 1.08, tracking -0.02em, ancho máximo 22ch.
 • H2: clamp(2rem, 1.4rem + 2.6vw, 3rem), interlineado 1.1.
 • Cuerpo: 1rem con interlineado 1.65 (1.125rem desde 1024px), color --ink-soft, ancho máximo 56ch.
@@ -81,7 +80,7 @@ Criterios de aceptación:
 Requisito 2: Hero
 Historia de usuario: Como reclutador quiero entender en 10 segundos quién es, qué hace y cuándo está disponible.
 Criterios de aceptación:
-1.  El h1 se construye desde una lista de segmentos en src/data/profile.ts (campo heroTitle), para poder cambiar el texto sin tocar el componente. Texto inicial: “Hola, soy Fabiola. Escribo [código limpio] y diseño interfaces que ayudan {destello} a las personas y se sienten naturales {flor}”. Los corchetes [ ] marcan la frase resaltada, las llaves { } marcan íconos SVG decorativos y las palabras en cursiva usan el estilo oblicuo. En desktop el titular ocupa 4 líneas como máximo (ajustar max-width si hace falta).
+1.  El h1 se construye desde una lista de segmentos en src/data/profile.ts (campo heroTitle), para poder cambiar el texto sin tocar el componente. Texto inicial: “Hola, soy Fabiola. Escribo [código limpio] y diseño interfaces que ayudan {destello} a las personas y se sienten naturales {flor}”. Los corchetes [ ] marcan la frase resaltada, las llaves { } marcan íconos SVG decorativos y las palabras en cursiva usan la cursiva de Inter. En desktop el titular ocupa 4 líneas como máximo (ajustar max-width si hace falta).
 2.  La frase resaltada “código limpio” tiene fondo --pink-200, color --rose-700, padding 0 .15em, radio 6px y box-decoration-break: clone para que se vea bien si salta de línea.
 3.  Los íconos inline miden 0.6em de alto, van alineados a la línea base y tienen aria-hidden. El destello va en --pink-400 y la flor en --lavender-300.
 4.  Bajo el titular va el párrafo (campo heroSubtitle): “Estudiante de quinto año de Ingeniería Civil en Informática. Me gusta aprender, innovar y ayudar: trabajo desde los requerimientos y el diseño en Figma hasta Flutter, pruebas y modelos de IA.”
@@ -259,7 +258,7 @@ CUANDO el sistema tenga prefers-reduced-motion: reduce, ENTONCES el sitio DEBER�
 • Lighthouse en móvil: Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 95, SEO ≥ 95.
 • LCP < 2.5 s, CLS < 0.1, INP < 200 ms.
 • Imágenes en WebP o AVIF con width y height, srcset, y loading="lazy" bajo el pliegue. El hero no lleva imágenes pesadas.
-• Fuentes: cargar solo los pesos usados, con preload de Pixelify Sans y DM Sans y font-display: swap.
+• Fuentes: cargar solo los pesos usados, con preload de Inter regular e itálica y font-display: swap.
 • JavaScript inicial menor a 180 KB comprimido (gzip), con el modal cargado de forma diferida.
 • title: “Fabiola Level | Práctica en desarrollo de software, diseño de interfaces, QA e IA”. Agregar meta description, Open Graph y Twitter Card (imagen de 1200×630 con la estética de la página), favicon (SVG de la flor y PNG de 32 y 180px), robots.txt y sitemap.xml.
 10. Estructura de carpetas sugerida

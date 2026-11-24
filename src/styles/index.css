@@ -16,8 +16,7 @@
   --color-peach-100: #ffe9dc;
   --color-butter-300: #ffe08a;
 
-  --font-display: "Pixelify Sans Variable", "Courier New", monospace;
-  --font-sans: "DM Sans Variable", system-ui, sans-serif;
+  --font-sans: "Inter Variable", system-ui, sans-serif;
   --text-pill: 0.875rem;
   --radius-card: 8px;
   --radius-cover: 4px;
@@ -45,7 +44,7 @@
 
   h1,
   h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-sans);
   }
 
   h1 {
@@ -138,7 +137,7 @@ html {
   display: none;
   align-items: center;
   gap: 6px;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 600;
 }
@@ -230,7 +229,7 @@ html {
   border-radius: var(--radius-control);
   padding: 9px 18px;
   color: var(--color-ink);
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -306,12 +305,10 @@ html {
 }
 .hero h1 {
   max-inline-size: none;
-  font-size: clamp(1.875rem, 1.39rem + 2.25vw, 2.875rem);
+  font-size: clamp(1.625rem, 1.31rem + 1.58vw, 2.78rem);
+  font-weight: 650;
+  line-height: 1.12;
   margin-bottom: 16px;
-}
-.hero h1 em {
-  font-style: oblique;
-  font-synthesis: style;
 }
 .hero-visual {
   position: relative;
@@ -458,7 +455,7 @@ html {
   padding: 10px clamp(14px, 2.6vw, 28px);
   border-bottom: 1px solid var(--color-ink-soft);
   background: var(--window-tint);
-  font: 600 clamp(1.125rem, 1rem + 0.46vw, 1.5rem) / 1.3 var(--font-display);
+  font: 600 clamp(1.125rem, 1rem + 0.46vw, 1.5rem) / 1.3 var(--font-sans);
 }
 .window-heading > span {
   transform-origin: left;
@@ -501,7 +498,7 @@ html {
   gap: 6px 7px;
 }
 .tag {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 0.9375rem;
   border-radius: var(--radius-control);
   background: var(--tone, var(--color-pink-100));
@@ -644,13 +641,13 @@ html {
   color: var(--color-rose-700);
 }
 .project-copy h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.35;
 }
 .academic-projects > h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.3;
@@ -681,7 +678,7 @@ html {
   border-radius: var(--radius-control);
   background: var(--color-pink-400);
   color: var(--color-ink);
-  font: 600 1rem var(--font-display);
+  font: 600 1rem var(--font-sans);
 }
 .academic-projects {
   margin-top: 26px;
@@ -706,7 +703,7 @@ html {
   background: var(--color-bg);
 }
 .project-row h4 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   font-weight: 600;
 }
@@ -807,7 +804,7 @@ html:has(.project-dialog[open]) {
   background: var(--color-lavender-100);
 }
 .dialog-tools h2 {
-  font: 600 clamp(1rem, 0.915rem + 0.52vw, 1.375rem) / 1.3 var(--font-display);
+  font: 600 clamp(1rem, 0.915rem + 0.52vw, 1.375rem) / 1.3 var(--font-sans);
   overflow-wrap: anywhere;
 }
 .close-dialog {
@@ -832,7 +829,7 @@ html:has(.project-dialog[open]) {
   padding: 25px clamp(18px, 5vw, 44px) 34px;
 }
 .modal-copy h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   margin-bottom: 4px;
   font-weight: 600;
@@ -969,7 +966,7 @@ html:has(.project-dialog[open]) {
   border-radius: var(--radius-card);
 }
 .skills-group h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   font-weight: 600;
   padding: 9px 12px;
@@ -999,7 +996,7 @@ html:has(.project-dialog[open]) {
   width: max-content;
 }
 .marquee-group li {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1053,7 +1050,7 @@ html:has(.project-dialog[open]) {
   background: var(--color-bg);
 }
 .timeline-content h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.35;
