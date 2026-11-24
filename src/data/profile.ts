@@ -4,7 +4,7 @@ import type { HeroSegment } from "../types/content";
 // EDITA AQUÍ
 export const profile = {
   name: "Fabiola Level",
-  email: "fabiola.level@cloud.uautonoma.cl",
+  email: "levelfabiola@gmail.com",
   linkedin: "https://www.linkedin.com/in/fabiola-level-84842426a",
   // TODO: actualizar LinkedIn cuando esté disponible la URL personalizada.
   github: "",

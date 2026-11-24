@@ -130,7 +130,7 @@ Requisito 8: Contacto y footer
 Criterios de aceptación:
 1.  Un titular serif grande “Conversemos” cierra la página, con una palabra resaltada o en cursiva.
 2.  Botones: Correo, LinkedIn y Descargar CV (PDF en /public). El botón de GitHub no se muestra en esta versión: existe en el código, pero solo aparece si el campo github de src/data/profile.ts tiene una URL.
-3.  CUANDO se pulsa Correo, ENTONCES se DEBERÁ copiar fabiola.level@cloud.uautonoma.cl al portapapeles, mostrar un aviso “Correo copiado” de 2 segundos y abrir mailto:.
+3.  CUANDO se pulsa Correo, ENTONCES se DEBERÁ copiar levelfabiola@gmail.com al portapapeles, mostrar un aviso “Correo copiado” de 2 segundos y abrir mailto:.
 4.  No se muestra el teléfono en el sitio. No hay formulario de contacto en esta versión.
 5.  Footer: “© 2026 Fabiola Level · Hecho con cariño en Santiago” y un botón de volver arriba.
 Requisito 9: README de mantenimiento
@@ -341,7 +341,7 @@ Proyecto 6 (secundario): Simulación hidráulica · 2025
 • Tecnologías: Python, pandas, NumPy, SciPy, Jupyter.
 Sobre mí (borrador): soy estudiante de quinto año de Ingeniería Civil en Informática en la Universidad Autónoma de Chile. Soy una persona enfocada: me gusta aprender, innovar y ayudar, y trabajo con código limpio y bien organizado. Tengo experiencia en desarrollo móvil con Flutter, diseño de interfaces en Figma, aseguramiento de calidad y aprendizaje automático. Fui QA Lead en el Sistema de Gestión Imprenta Fuentes y presido Mujeres en la Ingeniería.
 Hoy preparo mi trabajo de título, un MVP web para la trazabilidad de evidencia digital en incidentes de violencia de género facilitada por tecnologías, y busco una práctica profesional para aprender junto a un equipo y aportar con lo que sé.
-Contacto: fabiola.level@cloud.uautonoma.cl · LinkedIn: linkedin.com/in/fabiola-level-84842426a (TODO: personalizar la URL) · GitHub: sin URL por ahora, el botón no se muestra.
+Contacto: levelfabiola@gmail.com · LinkedIn: linkedin.com/in/fabiola-level-84842426a (TODO: personalizar la URL) · GitHub: sin URL por ahora, el botón no se muestra.
 12. Fuera de alcance (versión 1)
 • Formulario de contacto con backend.
 • Blog o CMS.
